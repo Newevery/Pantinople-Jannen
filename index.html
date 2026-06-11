@@ -115,44 +115,7 @@ nav a{
     font-size:1.1rem;
     max-width:600px;
 }
-/* HAMBURGER MENU */
-.menu-toggle{
-    display:none;
-    color:white;
-    font-size:24px;
-    cursor:pointer;
-}
 
-/* MOBILE NAV */
-@media(max-width:768px){
-
-    nav{
-        flex-direction:row;
-        justify-content:space-between;
-        align-items:center;
-    }
-
-    .nav-links{
-        position:absolute;
-        top:80px;
-        right:0;
-        background:rgba(47,93,80,.98);
-        width:200px;
-        flex-direction:column;
-        gap:15px;
-        padding:20px;
-        display:none;
-        border-radius:0 0 0 10px;
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .menu-toggle{
-        display:block;
-    }
-}
 .hero-img{
     flex:1;
     display:flex;
@@ -340,39 +303,31 @@ footer{
 <body>
 
 <header>
-   <nav>
+    <nav>
 
-    <div class="logo-area">
-        <img src="dnsc.png" class="logo" alt="DNSC">
-        <img src="ic.png" class="logo" alt="Institute of Computing">
+        <div class="logo-area">
+            <img src="dnsc.PNG" class="logo" alt="DNSC">
+            <img src="ic.PNG" class="logo" alt="Institute of Computing">
 
-        <div>
-            <strong>Jannen Portfolio</strong><br>
-            <small>BSIS Student</small>
+            <div>
+                <strong>Jannen Portfolio</strong><br>
+                <small>BSIS Student</small>
+            </div>
         </div>
-    </div>
 
-    <ul class="nav-links">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#achievements">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<ul>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#achievements">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars"></i>
-    </div>
 
-</nav>
-
+    </nav>
 </header>
-<script>
-function toggleMenu(){
-    document.querySelector(".nav-links").classList.toggle("active");
-}
-</script>
+
 <section class="hero">
 
     <div class="hero-text" data-aos="fade-right">
@@ -389,7 +344,7 @@ function toggleMenu(){
     <div class="hero-img" data-aos="fade-left">
 
         <div class="profile">
-            <img src="me.jpg" alt="Jannen Pantinople">
+            <img src="me.JPG" alt="Jannen Pantinople">
         </div>
 
     </div>
@@ -573,9 +528,7 @@ function toggleMenu(){
         </div>
 
     </div>
-
 </section>
-
 <section id="contact">
 
     <div class="glass" data-aos="fade-up">
@@ -621,10 +574,13 @@ function toggleMenu(){
     © 2026
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script>
-function toggleMenu(){
-    document.querySelector(".nav-links").classList.toggle("active");
-}
+AOS.init({
+    duration:1000,
+    once:true
+});
 </script>
 
 </body>
